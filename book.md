@@ -63,7 +63,15 @@ Há alguns detalhes importantes a se prestar atenção aqui:
 ### Executar e compilar são passos diferentes
 Antes de executar um programa é necessário compilar ele. A máquina não entende o código visual que programamos, por isso compilamos ele para transformá-lo em código binário executável para máquina.
 <br>
-O comando para fazer isso é o ``rustc``, para compilar um arquivo rust basta informar o seu nome de origem no command line e executar, como demonstrado abaixo:
+O comando para fazer isso é o ``rustc``. Para compilar um arquivo Rust basta informar o seu nome de origem no command line e executar, como demonstrado abaixo:
 ```
 rustc main.rs
 ```
+Se tiver conhecimento de C/C++ deve ter percebido que é bem parecido ao ``clang`` e o ``gcc``.
+<br>
+Se você executar ``ls`` em Linux ou Mac você verá o arquivo original .rs e o arquivo executável sem extensão.
+<br>
+Se você executar ``dir /B`` em Windows você verá o arquivo original .rs, o arquivo executável com extensão .exe e o arquivo de depuração finalizado em .pdb.
+<br>
+<br>
+Na próxima etapa aprenderemos a usar o Cargo.

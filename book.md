@@ -188,10 +188,15 @@ fn main() {
 ```
 Aqui temos muitas informações novas, vamos por partes.
 <br>
-Para conseguirmos ler o que o usuário digitou é necessário chamar o ``io`` da biblioteca padrão ``std``, usando a chamada ``use``, como podemos ver na primeira linha: ``use std::io``.<br>
+Para conseguirmos ler o que o usuário digitou é necessário chamar o ``io`` da biblioteca padrão ``std``, usando a chamada ``use``, como podemos ver na primeira linha: ``use std::io``.<br><br>
 O Rust tem um conjunto de itens que está embutido na biblioteca padrão e isso é chamado de ``prelude``, se você quiser usar algo que não é um ``prelude`` é necessário especificar com o ``use``.
-<br>
+<br><br>
 Como visto anteriormente o ``fn main(){}`` é o ponto de partida do nosso programa Rust, mas vamos ver isso com mais detalhes. O ``fn`` é usado para declarar uma nova função e o ``()`` leva os parâmetros da função, neste caso não há parâmetros por isso está vazio, o ``{}`` cria o corpo da nossa função onde adicionaremos o nosso código.
-<br>
+<br><br>
 Logo após criarmos a função ``main`` temos novamente o ``println!`` que você já sabe que é um macro e serve para imprimir no console.
-
+<br><br>
+Para armazenar a resposta do usuário criamos uma variável mutável. <br>Para criar uma variável usamos ``let`` juntamente com o ``mut`` que diz que a variável pode ser alterada mais tarde.
+<br><br>
+Ou seja, se você criar uma variável da seguinte forma: ``let apples = 5;`` ela não será mutável, você não poderá alterá-la posteriormente, porém se adicionar o mut: ``let mut apples = 5;`` você poderá alterar o valor da variável durante o código.
+<br><br>
+No Rust ao usar o ``=`` você está dizendo que deseja vincular um valor a variável, neste caso você está dizendo que a variável ``guess`` deve receber uma nova instância de ``String``. O ``::`` chama uma função que criar uma ``String`` vazia.

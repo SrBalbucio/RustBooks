@@ -1,2 +1,3 @@
 # RustBook-PTBR
-RustBook em PTBR
+Livros de Rust em Português Brasileiro.
+> Em desenvolvimento!

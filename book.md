@@ -46,7 +46,7 @@ Quebrando esse código em partes temos a primeira peça do quebra cabeça, a fun
 fn main(){
 }
 ```
-A função main é especial, é nela que o primeiro código é executado em um programa Rust. Neste caso a função main não tem parametros e nem retornos. Caso a função tivesse parametros eles entrariam no ``()``.
+A função main é especial, é nela que o primeiro código é executado em um programa Rust. Neste caso a função main não tem parâmetros e nem retornos. Caso a função tivesse parametros eles entrariam no ``()``.
 O corpo da função é definido pela ``{}``, portanto todo código dessa função deve estar dentro das chaves.
 <br>
 No corpo da nossa função ``main`` tinha o seguinte código:
@@ -167,7 +167,7 @@ Para checar se está tudo certo e o ``Hello World`` padrão será executado use 
 ### Processo de adivinhar!
 Para começar vamos pedir para que o usuário insira um palpite, abra o seu arquivo ``src/main.rs`` e vamos editá-lo:
 
-> Tradução: Aqui os textos estão em português, no documento original eles estão em inglês. E há adição de código extra.``
+> Tradução: Aqui os textos estão em português, no documento original eles estão em inglês. E há adição de código extra.
 
 ```rust
 use std::io;
@@ -186,3 +186,12 @@ fn main() {
     println!("Você disse: {guess}");
 }
 ```
+Aqui temos muitas informações novas, vamos por partes.
+<br>
+Para conseguirmos ler o que o usuário digitou é necessário chamar o ``io`` da biblioteca padrão ``std``, usando a chamada ``use``, como podemos ver na primeira linha: ``use std::io``.<br>
+O Rust tem um conjunto de itens que está embutido na biblioteca padrão e isso é chamado de ``prelude``, se você quiser usar algo que não é um ``prelude`` é necessário especificar com o ``use``.
+<br>
+Como visto anteriormente o ``fn main(){}`` é o ponto de partida do nosso programa Rust, mas vamos ver isso com mais detalhes. O ``fn`` é usado para declarar uma nova função e o ``()`` leva os parâmetros da função, neste caso não há parâmetros por isso está vazio, o ``{}`` cria o corpo da nossa função onde adicionaremos o nosso código.
+<br>
+Logo após criarmos a função ``main`` temos novamente o ``println!`` que você já sabe que é um macro e serve para imprimir no console.
+

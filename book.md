@@ -1,23 +1,23 @@
 # Introdução
-Este doc é a versão em Português Brasileiro do Rust Book, por conveniência este doc não está ao pé da letra, portanto espere alguns tópicos eliminados ou transcritos para dentro de outros, além de dicas e exemplos extras. <br><br>Com tudo isso em mente podemos começar a navegar pelo mundo Rust!
+Este doc é a versão em Português Brasileiro do Rust Book, por conveniência não está ao pé da letra, portanto espere alguns tópicos eliminados ou transcritos para dentro de outros, além de dicas e exemplos extras. <br><br>Com tudo isso dito podemos começar a navegar pelo mundo Rust!
 
 # 1.0 - Início
 Como havia dito acima, alguns tópicos foram arrancados por conveniência e um deles é o "Como instalar" que ficaria bem aqui. 
-Se você ainda não tem o Rust instalado por favor visite este [tópico](https://doc.rust-lang.org/book/ch01-01-installation.html) 
+Se você ainda não tem o Rust instalado por favor visite este [tópico](https://doc.rust-lang.org/book/ch01-01-installation.html).
 ## 1.1 - Hello World
 Com Rust instalado é hora de criarmos nosso primeiro programa, o famoso "Hello World", tradicional passo inicial ao aprender uma nova linguagem de programação.
 <br>
 ### Criando o diretório do Projeto:
 Para começarmos a criar os arquivos do projeto precisamos primeiro criar a pasta onde eles serão armazenados.<br>
-Para armazenar todos os projetos deste doc criaremos uma pasta chamada ``RustProjects``, porém cada projeto terá usa pasta separada dentro do ``RustProjects``.
+Neste doc criaremos uma pasta chamada ``RustProjects`` onde ficaram todos nossos projetos. Cada projeto terá sua pasta dentro do diretório original, para melhorar a nossa organização com passar das etapas.
 <br>
 <br>
-Abra o CMD e digite:
+Para criar as pastas abra o CMD e digite:
 ```
 mkdir ~/RustProjects
 cd ~/RustProjects
 ```
-Com a pasta ``RustProjects`` criada já podemos criar uma nova pasta dentro dela para o nosso primeiro projeto HelloWorld. Usaremos justamente o nome do projeto na pasta.
+Com a pasta ``RustProjects`` criada já podemos criar uma nova pasta dentro dela para o nosso primeiro projeto HelloWorld.
 <br><br>
 Abra o CMD e digite:
 ```
@@ -25,7 +25,7 @@ mkdir hello_world
 cd hello_world
 ```
 ### Escrevendo e executando um programa:
-Todos os arquivos Rust terminam em ``.rs``, ou seja, tem como extensão ``.rs``, ao criar um arquivo Rust se atente para não criar arquivos com nome contendo pulos/spaces (exemplo: hello world.rs, substitua por hello_world.rs).
+Todos os arquivos Rust terminam em ``.rs``, ou seja, tem como extensão ``.rs``. Ao criar um arquivo Rust se atente para não criar arquivos com nome contendo pulos/spaces, como ``hello world.rs`` substitua essa sentença por ``hello_world.rs``.<br>
 Com isso em mente vamos criar o nosso primeiro arquivo Rust, o ``main.rs`` e dentro dele vamos adicionar o seguinte código:
 ```rust
 fn main(){
@@ -46,8 +46,8 @@ Quebrando esse código em partes temos a primeira peça do quebra cabeça, a fun
 fn main(){
 }
 ```
-A função main é especial, é nela que o primeiro código é executado em um programa Rust. Neste caso a função main não tem parâmetros e nem retornos. Caso a função tivesse parametros eles entrariam no ``()``.
-O corpo da função é definido pela ``{}``, portanto todo código dessa função deve estar dentro das chaves.
+A função main é especial, é nela que o primeiro código é executado em um programa Rust. Neste caso a função main não tem parâmetros e nem retornos. Caso a função tivesse parâmetros eles entrariam no ``()``.
+O corpo da função é definido pela ``{}``, portanto todo código dessa função deve estar dentro delas.
 <br>
 No corpo da nossa função ``main`` tinha o seguinte código:
 ```rust
@@ -57,7 +57,7 @@ Esta linha de código faz todo trabalho do nosso programa HelloWorld: Ela imprim
 <br>
 Há alguns detalhes importantes a se prestar atenção aqui:
 - O estilo do Rust é recuar quatros espaços invés de uma guia tradicional.
-- O ``println!`` é uma macro do Rust, se fosse uma função não teria o ``!``, mas falaremos de macros mais pra frente. Apenas lembre-se que isto é uma macro.
+- O ``println!`` é uma macro do Rust, se fosse uma função não teria a ``!``, mas falaremos de macros mais pra frente. Apenas lembre-se que isto é uma macro.
 - Passamos uma String (texto) como parametro para o ``println!`` e por isso ele imprimiu ``Hello, world!``.
 - Ao fim da linha adicionamos ``;`` para dizer que a nossa linha/expressão acabou e está pronta para vir outra. A maioria das linhas em Rust terminam em ``;``.
 ### Executar e compilar são passos diferentes
@@ -132,7 +132,7 @@ fn main() {
 ```
 E temos aqui o nosso Hello World gerado pelo Cargo automaticamente.
 <br><br>
-O Cargo assume que todos seus arquivos ``.rs`` estão dentro da pasta ``src``, afim de melhorar a organização do projeto. Fora dele, dentro do diretório origem deve ficar apenas arquivos README, licenças, arquivos de configuração (como o ``Cargo.toml``) e afins.
+O Cargo assume que todos seus arquivos ``.rs`` estão dentro da pasta ``src``, afim de melhorar a organização do seu projeto. Fora dele, dentro do diretório origem deve ficar apenas arquivos README, licenças, arquivos de configuração (como o ``Cargo.toml``) e afins.
 
 > Nota: É possível converter um projeto sem o Cargo para um com, basta criar uma pasta ``src``, mover todos os arquivos de código para dentro e criar um ``Cargo.toml`` adequado para o seu pacote.
 
@@ -162,7 +162,7 @@ Aqui está como funciona: o programa gerará um número inteiro aleatório entre
 ### Criando um novo projeto com Cargo
 Como aprendemos anteriormente, vamos criar um novo projeto usando o comando ``cargo new guessing_game``.<br>
 O Cargo gerará toda estrutura padrão de projetos em Rust, se tiver alguma dúvida volte para parte inicial do doc.<br>
-Para checar se está tudo certo e o ``Hello World`` padrão será executado use o comando ``cargo run``.
+Para checar se está tudo certo e o ``Hello World`` padrão será executado, use o comando ``cargo run``.
 
 ### Processo de adivinhar!
 Para começar vamos pedir para que o usuário insira um palpite, abra o seu arquivo ``src/main.rs`` e vamos editá-lo:
@@ -199,4 +199,4 @@ Para armazenar a resposta do usuário criamos uma variável mutável. <br>Para c
 <br><br>
 Ou seja, se você criar uma variável da seguinte forma: ``let apples = 5;`` ela não será mutável, você não poderá alterá-la posteriormente, porém se adicionar o mut: ``let mut apples = 5;`` você poderá alterar o valor da variável durante o código.
 <br><br>
-No Rust ao usar o ``=`` você está dizendo que deseja vincular um valor a variável, neste caso você está dizendo que a variável ``guess`` deve receber uma nova instância de ``String``. O ``::`` chama uma função que criar uma ``String`` vazia.
+No Rust ao usar o ``=`` você está dizendo que deseja vincular um valor a variável, neste caso você está dizendo que a variável ``guess`` deve receber uma nova instância de ``String``. O ``::`` chama uma função que cria uma ``String`` vazia e a coloca na variável.
